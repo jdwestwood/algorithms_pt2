@@ -4,7 +4,13 @@
 # [knapsack_size][number_of_items], followed by [value1][weight1] ... , one item per line
 # Maximum value of items in knapsack, subject to total weight <= knapsack size
 #
-# see slides-dp-algo2-dp-knapsack.pdf's from lecture notes
+# see slides-dp-algo2-dp-knapsack.pdf's from lecture notes for the dynamic programming algorithm.
+#
+# Challenge with this big dataset is to use storage efficiently:
+#   1. Store values only for Ai (the current iteration) and Ai_1 (the previous iteration).
+#   2. Calculate all knapSize values for a given item, but store only values for Ai and Ai_1
+#       for weights where the value changes.
+#
 # 9/27/13: ran program on problem 1 dataset and obtain 2493893 for the maximum value, with weight 9976.
 # 9/27/13: ran program on problem 2 dataset and obtain 2493893 for the maximum value, with weight 9976.
 
